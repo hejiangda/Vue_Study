@@ -57,7 +57,9 @@
     <li v-for="book in books" :key="book.id">
       <p><strong>Id:</strong> {{ book.id }}<p>
       <p><strong>Title:</strong> {{ book.title }}</p>
-      <p><strong>Genres:</strong> <span v-for="genre in book.genres">{{genre}} </span></p>
+      <p><strong>Genres:</strong> <span v-for="(genre, index) in book.genres">
+  {{genre}}<span v-if="index < book.genres.length -1">, </span>
+</span></p>
     </li>
   </ul>
 `
