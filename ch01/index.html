@@ -16,29 +16,25 @@
 
     <!-- Script Element for our first App -->
     <script>
-        var app = new Vue({
-            el: '#app',
-            data: {
-                yes: true,
-                no: false
-            },
-            template: `
+var app = new Vue({
+  el: '#app',
+  data: {
+    yes: true,
+    no: false
+  },
+  template: `
     <div>
-      <div>
-        <h1>Show v-else-if</h1>
-        <h2 v-if="no">If</h2>
-        <h2 v-else-if="yes">Else If</h2>
-        <h2 v-else>Else</h2>
-      </div>
-      <div>
-        <h1>Show v-else</h1>
-        <h2 v-if="no">If</h2>
-        <h2 v-else-if="no">Else If</h2>
-        <h2 v-else>Else</h2>
-      </div>
+      <template v-if="no">
+        <h1>Don't show this</h1>
+        <h2>It's a secret</h2>
+      </template>
+      <template v-if="yes">
+        <h1>Show this</h1>
+        <h2>We like to share</h2>
+      </template>
     </div>
     `
-        });
+});
     </script>
 </body>
 
