@@ -21,9 +21,9 @@
             data: {
                 text: 'Getting to Know Vue.js'
             },
-            template: `<div>{{ capitalizeText() }}</div>`,
-            methods: {
-                capitalizeText: function () {
+            template: `<div>{{ capitalizedText }}</div>`,
+            computed: {
+                capitalizedText: function () {
                     return this.text.toUpperCase();
                 }
             }
