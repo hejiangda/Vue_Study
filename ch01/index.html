@@ -19,11 +19,12 @@
         var app = new Vue({
             el: '#app',
             data: {
-                myName: 'Cool Name'
+                someHTML: '<h1 style="color:#41b883; background-color:#35495e;">Getting to Know Vue.js</h1>'
             },
             template: `
         <div>
-            <div v-bind:name="myName"></div>
+            <div>{{ someHTML }}</div>
+            <div v-html="someHTML"></div>
         </div>
         `
         });
