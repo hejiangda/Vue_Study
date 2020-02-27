@@ -19,15 +19,14 @@
         var app = new Vue({
             el: '#app',
             data: {
-                propertyName: 'Hello from Getting to Know Vue.js!',
-                _propertyName: 'This will not be added to the reactive system.',
-                $propertyName: 'This will not be added to the reactive system.'
+                text: 'Getting to Know Vue.js'
             },
-            template: `<div>
-                    <div>{{ propertyName }}</div>
-                    <div>{{ _propertyName }}</div>
-                    <div>{{ $propertyName }}</div>
-                </div>`
+            template: `<div>{{ capitalizeText() }}</div>`,
+            methods: {
+                capitalizeText: function () {
+                    return this.text.toUpperCase();
+                }
+            }
         });
     </script>
 </body>
