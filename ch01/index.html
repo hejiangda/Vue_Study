@@ -19,14 +19,13 @@
         var app = new Vue({
             el: '#app',
             data: {
-                text: 'Getting to Know Vue.js'
+                myName: 'Cool Name'
             },
-            template: `<div>{{ capitalizedText }}</div>`,
-            computed: {
-                capitalizedText: function () {
-                    return this.text.toUpperCase();
-                }
-            }
+            template: `
+        <div>
+            <div v-bind:name="myName"></div>
+        </div>
+        `
         });
     </script>
 </body>
