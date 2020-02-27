@@ -19,20 +19,14 @@
 var app = new Vue({
   el: '#app',
   data: {
-    yes: true,
-    no: false
+    items: ['first', 'two', '3']
   },
   template: `
-    <div>
-      <template v-if="no">
-        <h1>Don't show this</h1>
-        <h2>It's a secret</h2>
-      </template>
-      <template v-if="yes">
-        <h1>Show this</h1>
-        <h2>We like to share</h2>
-      </template>
-    </div>
+      <ul>
+        <li v-for="item in items">
+          {{item}}
+        </li>
+      </ul>
     `
 });
     </script>
