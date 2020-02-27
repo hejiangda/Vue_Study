@@ -52,6 +52,17 @@
                     }
                 ]
             },
+            methods: {
+                teenFilter: function () {
+                    this.books = this.books.filter(book => {
+                        return (
+                            book.genres.findIndex(genre => {
+                                return genre === 'teen';
+                            }) >= 0
+                        );
+                    });
+                }
+            },
             template: `
   <ul>
     <li v-for="book in books" :key="book.id">
