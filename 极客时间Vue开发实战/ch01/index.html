@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Class</title>
+</head>
+
+<body>
+    <div id="app">
+        {{message + message}}
+        <ul>
+            <li>
+                <span v-bind:id="message"></span>
+            </li>
+            <li>
+                <span v-if="item.status">{{item.title}}</span>
+                <span v-else style="text-decoration: line-through;">{{item.title}}</span>
+            </li>
+            <li>
+                <input v-if="item.status" type="button" value="hello">
+            </li>
+            <li v-for="it in items">
+                <span v-if=""></span>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World',
+                item: {
+                    title: 'First Class',
+                    status: true
+                },
+                list: [{
+                    title:'a',
+                    del:false
+                }
+                ]
+            }
+        });
+
+    </script>
+</body>
+
+</html>
